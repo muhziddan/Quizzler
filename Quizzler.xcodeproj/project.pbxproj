@@ -13,6 +13,7 @@
 		8F98BEC32817D5DE004ED29B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F98BEC12817D5DE004ED29B /* Main.storyboard */; };
 		8F98BEC52817D5E1004ED29B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F98BEC42817D5E1004ED29B /* Assets.xcassets */; };
 		8F98BEC82817D5E1004ED29B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F98BEC62817D5E1004ED29B /* LaunchScreen.storyboard */; };
+		8F98BED028180BE5004ED29B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F98BECF28180BE5004ED29B /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8F98BEC42817D5E1004ED29B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F98BEC72817D5E1004ED29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F98BEC92817D5E1004ED29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F98BECF28180BE5004ED29B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8F98BEC42817D5E1004ED29B /* Assets.xcassets */,
 				8F98BEC62817D5E1004ED29B /* LaunchScreen.storyboard */,
 				8F98BEC92817D5E1004ED29B /* Info.plist */,
+				8F98BECF28180BE5004ED29B /* Question.swift */,
 			);
 			path = Quizzler;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F98BEC02817D5DE004ED29B /* ViewController.swift in Sources */,
+				8F98BED028180BE5004ED29B /* Question.swift in Sources */,
 				8F98BEBC2817D5DE004ED29B /* AppDelegate.swift in Sources */,
 				8F98BEBE2817D5DE004ED29B /* SceneDelegate.swift in Sources */,
 			);

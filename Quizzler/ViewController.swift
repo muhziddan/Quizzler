@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var falseButton: UIButton!
     
     let quiz = [
-        ["Cow is a Mammal", "True"],
-        ["Chicken has four leg", "False"],
-        ["4 modulo 2 is 0", "True"]
+        Question(q: "Cow is a Mammal", a: "True"),
+        Question(q: "Chicken has four leg", a: "False"),
+        Question(q: "4 modulo 2 is 0", a: "True")
     ]
     
     var questionNumber = 0
@@ -29,10 +29,9 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        print("questionNumber :\(questionNumber) \(quiz[questionNumber][1])")
-        if (sender.titleLabel?.text == quiz[questionNumber][1]) {
+        print("questionNumber :\(questionNumber) \(quiz[questionNumber].answer)")
+        if (sender.titleLabel?.text == quiz[questionNumber].answer) {
             if questionNumber < quiz.count - 1 {
                 questionNumber += 1
                 print("called")
@@ -44,6 +43,6 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-        questionLabel.text = quiz[questionNumber][0]
+        questionLabel.text = quiz[questionNumber].text
     }
 }
