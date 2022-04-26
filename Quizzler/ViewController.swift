@@ -42,14 +42,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        print("questionNumber :\(questionNumber) \(quiz[questionNumber].answer)")
         if (sender.titleLabel?.text == quiz[questionNumber].answer) {
             sender.backgroundColor = UIColor.green
-            if questionNumber < quiz.count - 1 {
+            if questionNumber <= quiz.count - 1 {
                 questionNumber += 1
-            } else {
-                questionNumber = 0
             }
+//            else {
+//                questionNumber = 0
+//            }
         } else {
             sender.backgroundColor = UIColor.red
         }
@@ -58,7 +58,15 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-        questionLabel.text = quiz[questionNumber].text
+        if questionNumber < quiz.count {
+            questionLabel.text = quiz[questionNumber].text
+            progressBar.setProgress(Float(questionNumber) / Float(quiz.count), animated: true)
+        } else {
+            progressBar.setProgress(1.0, animated: true)
+            questionLabel.text = "Completed!"
+            trueButton.isHidden = true
+            falseButton.isHidden = true
+        }
         UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseIn, animations: {
             self.trueButton.backgroundColor = UIColor.clear
             self.falseButton.backgroundColor = UIColor.clear
