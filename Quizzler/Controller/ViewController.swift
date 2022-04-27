@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var thirdButton: UIButton!
     
     var quizLogic = QuizLogic()
     
@@ -49,22 +50,30 @@ class ViewController: UIViewController {
     
     func updateUI() {
         if quizLogic.questionNumber == -1 {
-            scoreLabel.isHidden = true
-            questionLabel.text = "Welcome to Quizzler! Let's start the quiz!"
             trueButton.setTitle("Start the quiz", for: UIControl.State.normal)
+            scoreLabel.isHidden = true
             falseButton.isHidden = true
+            thirdButton.isHidden = true
+            questionLabel.text = "Welcome to Quizzler! Let's start the quiz!"
+            progressBar.progress = 0
+            progressBar.isHidden = true
         } else if quizLogic.questionNumber < quizLogic.quiz.count {
+            trueButton.setTitle(quizLogic.getMultipleChoice(nButton: 0), for: UIControl.State.normal)
+            falseButton.setTitle(quizLogic.getMultipleChoice(nButton: 1), for: UIControl.State.normal)
+            thirdButton.setTitle(quizLogic.getMultipleChoice(nButton: 2), for: UIControl.State.normal)
             scoreLabel.isHidden = false
-            trueButton.setTitle("True", for: UIControl.State.normal)
             falseButton.isHidden = false
+            thirdButton.isHidden = false
             questionLabel.text = quizLogic.getQuestionText()
             scoreLabel.text = "Score \(quizLogic.getScore())"
             progressBar.setProgress(quizLogic.getProgess(), animated: true)
+            progressBar.isHidden = false
         } else {
-            progressBar.setProgress(1.0, animated: true)
-            questionLabel.text = "Completed!"
             trueButton.setTitle("Start Again", for: UIControl.State.normal)
             falseButton.isHidden = true
+            thirdButton.isHidden = true
+            questionLabel.text = "Completed!"
+            progressBar.setProgress(1.0, animated: true)
         }
         
         UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseIn, animations: {

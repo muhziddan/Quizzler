@@ -35,13 +35,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-hQ-Fhu">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="558"/>
+                                        <rect key="frame" x="0.0" y="60" width="374" height="468"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" red="0.96862745098039216" green="1" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-UK-ETo">
-                                        <rect key="frame" x="0.0" y="628" width="374" height="80"/>
+                                        <rect key="frame" x="0.0" y="538" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="P4a-AK-OQA"/>
                                         </constraints>
@@ -55,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-gD-oAc">
-                                        <rect key="frame" x="0.0" y="718" width="374" height="80"/>
+                                        <rect key="frame" x="0.0" y="628" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="iTG-Mg-rBm"/>
                                         </constraints>
@@ -66,6 +66,20 @@
                                         </state>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fB6-YX-jnL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-Aw-OYR">
+                                        <rect key="frame" x="0.0" y="718" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="adI-L3-7gp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Third Option" backgroundImage="Rectangle">
+                                            <color key="titleColor" red="0.96862745100000003" green="1" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1OR-2P-BpR"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="68B-av-GfG">
@@ -97,6 +111,7 @@
                         <outlet property="progressBar" destination="68B-av-GfG" id="9CN-yv-XH3"/>
                         <outlet property="questionLabel" destination="Zjs-hQ-Fhu" id="rju-z9-f2J"/>
                         <outlet property="scoreLabel" destination="4Fw-zw-jsQ" id="9YL-4M-E0e"/>
+                        <outlet property="thirdButton" destination="MKf-Aw-OYR" id="qCw-25-b4A"/>
                         <outlet property="trueButton" destination="Ec2-UK-ETo" id="FZN-l1-wew"/>
                     </connections>
                 </viewController>
