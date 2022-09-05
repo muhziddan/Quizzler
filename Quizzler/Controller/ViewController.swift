@@ -79,6 +79,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseIn, animations: {
             self.trueButton.backgroundColor = UIColor.clear
             self.falseButton.backgroundColor = UIColor.clear
+            self.thirdButton.backgroundColor = UIColor.clear
         }, completion: nil)
     }
 }
